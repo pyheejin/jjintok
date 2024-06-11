@@ -3,7 +3,6 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:jjintok/constants/gaps.dart';
 import 'package:jjintok/constants/sizes.dart';
 import 'package:jjintok/featurs/authentication/birthday_screen.dart';
-import 'package:jjintok/featurs/authentication/username_screen.dart';
 import 'package:jjintok/featurs/authentication/widgets/form_button.dart';
 
 class PasswordScreen extends StatefulWidget {
@@ -35,12 +34,12 @@ class _PasswordScreenState extends State<PasswordScreen> {
     super.dispose();
   }
 
-  void _onNextTap() {
-    if (_password.isEmpty) return;
-    Navigator.of(context).push(MaterialPageRoute(
-      builder: (context) => const UsernameScreen(),
-    ));
-  }
+  // void _onNextTap() {
+  //   if (_password.isEmpty) return;
+  //   Navigator.of(context).push(MaterialPageRoute(
+  //     builder: (context) => const UsernameScreen(),
+  //   ));
+  // }
 
   bool _isPasswordValid() {
     return _password.isNotEmpty && _password.length > 8;
@@ -165,10 +164,11 @@ class _PasswordScreenState extends State<PasswordScreen> {
               ),
               Gaps.v28,
               GestureDetector(
-                  onTap: _onSubmit,
-                  child: FormButton(
-                    disabled: !_isPasswordValid(),
-                  ))
+                onTap: _onSubmit,
+                child: FormButton(
+                  disabled: !_isPasswordValid(),
+                ),
+              ),
             ],
           ),
         ),

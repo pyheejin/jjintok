@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:jjintok/constants/gaps.dart';
 import 'package:jjintok/constants/sizes.dart';
 import 'package:jjintok/featurs/authentication/password_screen.dart';
-import 'package:jjintok/featurs/authentication/username_screen.dart';
 import 'package:jjintok/featurs/authentication/widgets/form_button.dart';
 
 class EmailScreen extends StatefulWidget {
@@ -33,12 +32,12 @@ class _EmailScreenState extends State<EmailScreen> {
     super.dispose();
   }
 
-  void _onNextTap() {
-    if (_email.isEmpty) return;
-    Navigator.of(context).push(MaterialPageRoute(
-      builder: (context) => const UsernameScreen(),
-    ));
-  }
+  // void _onNextTap() {
+  //   if (_email.isEmpty) return;
+  //   Navigator.of(context).push(MaterialPageRoute(
+  //     builder: (context) => const UsernameScreen(),
+  //   ));
+  // }
 
   String? _isEmailValid() {
     if (_email.isEmpty) return null;

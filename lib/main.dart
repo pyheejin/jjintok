@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:jjintok/constants/sizes.dart';
-import 'package:jjintok/featurs/authentication/onboarding/interests_screen.dart';
-import 'package:jjintok/featurs/authentication/sign_up_screen.dart';
+import 'package:jjintok/featurs/inbox/activity_screen.dart';
+import 'package:jjintok/featurs/main_navigation/main_navigation_screen.dart';
 
 void main() {
   runApp(const JJinTok());
@@ -14,21 +14,27 @@ class JJinTok extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'JJinTok',
       theme: ThemeData(
-          scaffoldBackgroundColor: Colors.white,
-          primaryColor: const Color(0xFFE9435A),
-          appBarTheme: const AppBarTheme(
-            elevation: 0,
-            foregroundColor: Colors.black,
-            backgroundColor: Colors.white,
-            titleTextStyle: TextStyle(
-              color: Colors.black,
-              fontSize: Sizes.size16 + Sizes.size2,
-              fontWeight: FontWeight.w600,
-            ),
-          )),
-      home: const InterestsScreen(),
+        splashColor: Colors.transparent,
+        highlightColor: Colors.transparent,
+        scaffoldBackgroundColor: Colors.white,
+        primaryColor: const Color(0xFFE9435A),
+        textSelectionTheme: const TextSelectionThemeData(
+          cursorColor: Color(0xFFE9435A),
+        ),
+        appBarTheme: const AppBarTheme(
+          elevation: 0,
+          foregroundColor: Colors.black,
+          backgroundColor: Colors.white,
+          titleTextStyle: TextStyle(
+            color: Colors.black,
+            fontSize: Sizes.size16 + Sizes.size2,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+      ),
+      home: const ActivityScreen(),
     );
   }
 }

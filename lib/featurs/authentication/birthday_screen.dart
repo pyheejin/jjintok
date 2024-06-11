@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:jjintok/constants/gaps.dart';
 import 'package:jjintok/constants/sizes.dart';
-import 'package:jjintok/featurs/authentication/email_screen.dart';
 import 'package:jjintok/featurs/authentication/onboarding/interests_screen.dart';
 
 import 'widgets/form_button.dart';
@@ -37,9 +36,12 @@ class _BirthdayScreenState extends State<BirthdayScreen> {
   }
 
   void _onNextTap() {
-    Navigator.of(context).push(MaterialPageRoute(
-      builder: (context) => const InterestsScreen(),
-    ));
+    Navigator.of(context).pushAndRemoveUntil(
+      MaterialPageRoute(
+        builder: (context) => const InterestsScreen(),
+      ),
+      (route) => false,
+    );
   }
 
   void _setTextFieldDate(DateTime date) {
