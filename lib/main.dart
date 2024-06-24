@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:jjintok/constants/sizes.dart';
-import 'package:jjintok/featurs/inbox/activity_screen.dart';
 import 'package:jjintok/featurs/main_navigation/main_navigation_screen.dart';
 
 void main() {
@@ -34,7 +33,7 @@ class JJinTok extends StatelessWidget {
           ),
         ),
       ),
-      home: const ActivityScreen(),
+      home: const MainNavigationScreen(),
     );
   }
 }
